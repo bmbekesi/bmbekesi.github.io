@@ -1,7 +1,7 @@
 # Test website
 
 ## Balázs
-[Test](..//test.md)
+[Test](..//blob/main/README.md)
 ## Projects
 - Interplay of harmonic maps with convex functions and foliations
 
