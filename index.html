@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html>
 <style>
+.navbar{ 
+list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbaritem{ 
+float: left;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-family: Geneva;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: darkred;
+}
+
+
 head,body,footer{
 	background-color: black;
 }
 h1,h2,h3,h4,h5{
 	font-family: Geneva;
     color: lightgrey;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
-ul,ol{
+ol{
 	font-family: monospace;
     color:white;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 body{
 	font-family: monospace;
-    margin-left: 20%;
-    margin-right: 20%;
     color:white;
 }
 p{
-	monospace;
+	font-family: monospace;
     color:white;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 
@@ -38,12 +69,19 @@ p{
 
 
 <body>
-
+<ul class="navbar">
+  <li class="navbaritem"><a class="active" href="#home">Balázs Márk Békési</a></li>
+  <li class="navbaritem"><a href="#news">Research</a></li>
+  <li class="navbaritem"><a href="#contact">Seminars</a></li>
+  <li class="navbaritem"><a href="#about">Useful links</a></li>
+</ul>
+<div style="padding:20px;margin-top:30px;background-color:black;height:10px;">
+</div>
 <h1>Balázs Márk Békési</h1>
 <p>
 Currently, I am a PhD student at the <a href="https://www.uni-hannover.de/de/">LUH</a> under the guidance of Lynn Heller and Roger Bielawski. Beforehand, I studied mathematics and some theoretical physics at the LUH as well. My current contact information can be found <a href="https://www.differentialgeometrie.uni-hannover.de/en/institut/personenverzeichnis/personen-detailansicht?tx_t3luhepv_t3luhepvoe%5Baction%5D=detailsToPerson&tx_t3luhepv_t3luhepvoe%5Bcontroller%5D=Organisation&tx_t3luhepv_t3luhepvoe%5BdisablePersHomepages%5D=0&tx_t3luhepv_t3luhepvoe%5Borganisation%5D=31&tx_t3luhepv_t3luhepvoe%5Bperson%5D=1963&tx_t3luhepv_t3luhepvoe%5Brole%5D=207&cHash=6fe4b353f11422197c8ca95f85b89b5b">here</a>.
 </p>
-<a href="seminar.html">LUH</a>
+
 
 
 <h3> Research profile </h3>
@@ -51,19 +89,18 @@ Currently, I am a PhD student at the <a href="https://www.uni-hannover.de/de/">L
 I am broadly interested in several aspects of geometry and mathematical physics. Some of my current projects are:
 </p>
 
-<ul>
+<ol>
   <li> Non-existence theorems for harmonic maps. </li>
   <li> Understanding the structure of the moduli space of the extended Bogomolny equation.</li>
   <li> Universal Higgs bundles and properties of canonical sections. </li>
   <li> Deformations of the character variety of the once punctured torus. </li>
-</ul>
+</ol>
 
 
 <h3> Work experience </h3>
-
-<ul>
+<ol>
   <li> Teaching assistant for the courses real analysis 1,2,3, differentiable manifolds, Riemannian geometry, mathematics for physicists, symplectic geometry, mathematics for engineers, mathematical gauge theory at (LUH). </li>
-</ul>
+</ol>
 
 
 
