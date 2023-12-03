@@ -14,16 +14,23 @@ list-style-type: none;
 .navbaritem{ 
 float: left;
 }
-
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10px 16px;
-  text-decoration: none;
-  font-family: Geneva;
+.navbarlink{
+display: block;
+color: white;
+text-align: center;
+padding: 10px 16px;
+text-decoration: none;
+font-family: Geneva;
 }
+.clicklink{
+color: darkred;
+text-decoration: none;
+font-family: monospace;
+}
+
+
+
+
 
 li a:hover:not(.active) {
   background-color: #111;
@@ -70,10 +77,10 @@ p{
 
 <body>
 <ul class="navbar">
-  <li class="navbaritem"><a href="index.html">Balázs Márk Békési</a></li>
-  <li class="navbaritem"><a href="research.html">Research</a></li>
-  <li class="navbaritem"><a class="active"href="seminar.html">Seminars</a></li>
-  <li class="navbaritem"><a href="links.html">Useful links</a></li>
+  <li class="navbaritem"><a class="navbarlink" href="index.html">Balázs Márk Békési</a></li>
+  <li class="navbaritem"><a class="navbarlink" href="research.html">Research</a></li>
+  <li class="navbaritem"><a class="active navbarlink" href="seminar.html">Seminars</a></li>
+  <li class="navbaritem"><a class="navbarlink" href="links.html">Useful links</a></li>
 </ul>
 <div style="padding:20px;margin-top:30px;background-color:black;height:10px;">
 </div>
@@ -92,7 +99,7 @@ p{
 </p>
 <h1> Attended Seminars </h1>
 	<ol>
-		<li> Dirac operators, Atiyah-Singer index theorem and supersymmetry, <a href="https://sites.google.com/view/mathphy-hannover-potsdam/wise-2324?authuser=0">LUH-Potsdam</a>, 2023</li>
+		<li> Dirac operators, Atiyah-Singer index theorem and supersymmetry, <a class="clicklink" href="https://sites.google.com/view/mathphy-hannover-potsdam/wise-2324?authuser=0">LUH-Potsdam</a>, 2023</li>
 		<li> DG-ANA:Harmonic maps between manifolds with boundary, LUH, 2023</li>
 		<li> DG:Hyperkähler geometry, LUH, 2023</li>
 		<li> DG-ANA:Analysis and Geoemtry, LUH, 2023</li>
