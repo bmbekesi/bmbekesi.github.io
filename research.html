@@ -14,16 +14,23 @@ list-style-type: none;
 .navbaritem{ 
 float: left;
 }
-
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10px 16px;
-  text-decoration: none;
-  font-family: Geneva;
+.navbarlink{
+display: block;
+color: white;
+text-align: center;
+padding: 10px 16px;
+text-decoration: none;
+font-family: Geneva;
 }
+.clicklink{
+color: darkred;
+text-decoration: none;
+font-family: monospace;
+}
+
+
+
+
 
 li a:hover:not(.active) {
   background-color: #111;
@@ -70,10 +77,10 @@ p{
 
 <body>
 <ul class="navbar">
-  <li class="navbaritem"><a href="index.html">Balázs Márk Békési</a></li>
-  <li class="navbaritem"><a class="active"  href="research.html">Research</a></li>
-  <li class="navbaritem"><a href="seminar.html">Seminars</a></li>
-  <li class="navbaritem"><a href="links.html">Useful links</a></li>
+  <li class="navbaritem"><a class="navbarlink" href="index.html">Balázs Márk Békési</a></li>
+  <li class="navbaritem"><a class="active navbarlink" href="research.html">Research</a></li>
+  <li class="navbaritem"><a class="navbarlink" href="seminar.html">Seminars</a></li>
+  <li class="navbaritem"><a class="navbarlink" href="links.html">Useful links</a></li>
 </ul>
 <div style="padding:20px;margin-top:30px;background-color:black;height:10px;">
 </div>
