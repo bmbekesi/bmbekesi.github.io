@@ -5,17 +5,13 @@ var elem = document.getElementById("myAnimation");
 var pos_x = 150;
 var pos_y = 150;
 
-window.addEventListener("mousemove", function(event) {
-  // Get the mouse coordinates from the event object
-  var x = event.clientX;
-  var y = event.clientY;
 
 
 // Define the animation function
 function myMove() {
   // Increment the position by 1 pixel
-  pos_x = pos_x + 5*Math.sign(Math.random()-0.5)+x;
-  pos_y = pos_y + 5*Math.sign(Math.random()-0.5)+y;
+  pos_x = pos_x + 5*Math.sign(Math.random()-0.5);
+  pos_y = pos_y + 5*Math.sign(Math.random()-0.5);
   // Update the style properties
   elem.style.top = pos_x + "px";
   elem.style.left = pos_y + "px";
