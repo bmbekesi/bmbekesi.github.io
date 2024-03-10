@@ -1,0 +1,109 @@
+.navbar{ 
+list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbaritem{ 
+float: left;
+}
+.navbarlink{
+display: block;
+color: white;
+text-align: center;
+padding: 10px 16px;
+text-decoration: none;
+font-family: Geneva;
+}
+.clicklink{
+color: darkred;
+text-decoration: none;
+font-family: monospace;
+}
+
+.publication{
+	font-family: monospace;
+    color:white;
+	display: flex;
+	flex-direction: column-reverse;
+
+}
+.publicationitem{
+	font-family: monospace;
+    color:white;
+}
+
+.project{
+	font-family: monospace;
+    color:white;
+	list-style-type: none;
+	padding: 0px;
+	top: 0;
+}
+.projectitem{
+	font-family: monospace;
+    color:white;
+	padding: 10px 0px;
+}
+
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: darkred;
+}
+
+
+
+
+
+head,body,footer{
+	background-color: black;
+}
+h1,h2,h3,h4,h5{
+	font-family: Geneva;
+    color: lightgrey;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+ol{
+	font-family: monospace;
+    color:white;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+body{
+	font-family: monospace;
+    color:white;
+}
+p{
+	font-family: monospace;
+    color:white;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#myContainer {
+  width: 80%;
+  height: 400px;
+  position: relative;
+  background: black;
+}
+
+#myAnimation {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background: grey;
+}
+
+/* Add a transition effect to the animation element */
+#myAnimation {
+  transition: all 1s;
+}

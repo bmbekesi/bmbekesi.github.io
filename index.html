@@ -1,86 +1,15 @@
 <!DOCTYPE html>
 <html>
-<style>
-.navbar{ 
-list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.navbaritem{ 
-float: left;
-}
-.navbarlink{
-display: block;
-color: white;
-text-align: center;
-padding: 10px 16px;
-text-decoration: none;
-font-family: Geneva;
-}
-.clicklink{
-color: darkred;
-text-decoration: none;
-font-family: monospace;
-}
-
-
-
-
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: darkred;
-}
-
-
-head,body,footer{
-	background-color: black;
-}
-h1,h2,h3,h4,h5{
-	font-family: Geneva;
-    color: lightgrey;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-ol{
-	font-family: monospace;
-    color:white;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-body{
-	font-family: monospace;
-    color:white;
-}
-p{
-	font-family: monospace;
-    color:white;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-
-</style>
-
+<link rel="stylesheet" href="css/style.css">
 <head>
-<title>Research page</title>
+	<title>Balázs Márk Békési</title>
 </head>
-
-
 <body>
 <ul class="navbar">
   <li class="navbaritem"><a class="active navbarlink" href="index.html">Balázs Márk Békési</a></li>
   <li class="navbaritem"><a class="navbarlink" href="research.html">Research</a></li>
-  <li class="navbaritem"><a class="navbarlink" href="seminar.html">Seminars</a></li>
-  <li class="navbaritem"><a class="navbarlink" href="links.html">Useful links</a></li>
+  <li class="navbaritem"><a class="navbarlink" href="events.html">Events</a></li>
+  <li class="navbaritem"><a class="navbarlink" href="ytseminar.html">YT Seminar</a></li>
 </ul>
 <div style="padding:20px;margin-top:30px;background-color:black;height:10px;">
 </div>
@@ -89,37 +18,14 @@ p{
 Currently, I am a PhD student at the <a class="clicklink" href="https://www.uni-hannover.de/de/">LUH</a> under the guidance of Lynn Heller and Roger Bielawski. Beforehand, I studied mathematics and some theoretical physics at the LUH as well. My current contact information can be found <a class="clicklink" href="https://www.differentialgeometrie.uni-hannover.de/en/institut/personenverzeichnis/personen-detailansicht?tx_t3luhepv_t3luhepvoe%5Baction%5D=detailsToPerson&tx_t3luhepv_t3luhepvoe%5Bcontroller%5D=Organisation&tx_t3luhepv_t3luhepvoe%5BdisablePersHomepages%5D=0&tx_t3luhepv_t3luhepvoe%5Borganisation%5D=31&tx_t3luhepv_t3luhepvoe%5Bperson%5D=1963&tx_t3luhepv_t3luhepvoe%5Brole%5D=207&cHash=6fe4b353f11422197c8ca95f85b89b5b">here</a>.
 </p>
 
+<div id="myContainer"></div>
+<div id="myAnimation">
+<h1>T</h1>
+</div>
 
-
-<h3> Research profile </h3>
-<p>
-I am broadly interested in several aspects of geometry and mathematical physics. Some of my current projects are:
-</p>
-
-<ol>
-  <li> Non-existence theorems for harmonic maps. </li>
-  <li> Understanding the structure of the moduli space of the extended Bogomolny equation.</li>
-  <li> Universal Higgs bundles and properties of canonical sections. </li>
-  <li> Deformations of the character variety of the once punctured torus. </li>
-</ol>
-
-
-<h3> Work experience </h3>
-<ol>
-  <li> Teaching assistant for the courses real analysis 1,2,3, differentiable manifolds, Riemannian geometry, mathematics for physicists, symplectic geometry, mathematics for engineers, mathematical gauge theory at (LUH). </li>
-</ol>
-
-
-
-<h3>Publications</h3>
-<h5> Preprints </h5>
-<ol>
-  <li>Perturbed cone theorems for proper harmonic maps </li>
-  <li>Stochastic completeness, pullvexity and harmonic maps </li>
-  <li>Topological and geometric aspects of the barrier problem</li>
-</ol>
-<h5> Published </h5>
-
+<script src="js/animation.js"></script>
 
 </body>
 </html>
+
+
