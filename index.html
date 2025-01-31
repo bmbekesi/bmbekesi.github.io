@@ -1,31 +1,233 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="css/style.css">
+<html lang="en">
 <head>
-	<title>Balázs Márk Békési</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balázs Márk Békési</title>
+    <style>
+        body {
+            background-color: black;
+            color: lightgrey;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+			overflow: hidden;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+        }
+        .navbar a {
+            color: lightgrey;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        .navbar a.active {
+            background-color: darkred;
+            color: lightgrey;
+        }
+        .content {
+            padding-top: 70px;
+            text-align: center;
+			position: relative;
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        canvas {
+            display: block;
+            margin: auto;
+            background-color: black;
+        }
+		.section {
+            margin: 20px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .toggle-list {
+            list-style: none;
+            padding: 0;
+        }
+        .toggle-list li {
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+        .toggle-content {
+            display: none;
+            padding: 10px;
+            background-color: #444;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+		.clicklink{
+			color: darkred;
+			text-decoration: none;
+			font-family: monospace;
+		}
+		html{
+		overflow-x: hidden;
+		height=device-height;
+		}
+    </style>
 </head>
 <body>
-<ul class="navbar">
-  <li class="navbaritem"><a class="active navbarlink" href="index.html">Balázs Márk Békési</a></li>
-  <li class="navbaritem"><a class="navbarlink" href="research.html">Research</a></li>
-  <li class="navbaritem"><a class="navbarlink" href="events.html">Events</a></li>
-  <li class="navbaritem"><a class="navbarlink" href="ytseminar.html">YT Seminar</a></li>
-</ul>
-<div style="padding:20px;margin-top:30px;background-color:black;height:10px;">
-</div>
-<h1>Balázs Márk Békési</h1>
-<p>
-Currently, I am a PhD student at the <a class="clicklink" href="https://www.uni-hannover.de/de/">LUH</a> under the guidance of Lynn Heller and Roger Bielawski. Beforehand, I studied mathematics and some theoretical physics at the LUH as well. My current contact information can be found <a class="clicklink" href="https://www.differentialgeometrie.uni-hannover.de/en/institut/personenverzeichnis/personen-detailansicht?tx_t3luhepv_t3luhepvoe%5Baction%5D=detailsToPerson&tx_t3luhepv_t3luhepvoe%5Bcontroller%5D=Organisation&tx_t3luhepv_t3luhepvoe%5BdisablePersHomepages%5D=0&tx_t3luhepv_t3luhepvoe%5Borganisation%5D=31&tx_t3luhepv_t3luhepvoe%5Bperson%5D=1963&tx_t3luhepv_t3luhepvoe%5Brole%5D=207&cHash=6fe4b353f11422197c8ca95f85b89b5b">here</a>.
-</p>
-
-<div id="myContainer"></div>
-<div id="myAnimation">
-<h1></h1>
-</div>
-
-<script src="js/animation.js"></script>
-
+    <nav class="navbar">
+        <a href="#home" class="active" onclick="setActive(event, 'home')">Balázs Márk Békési</a>
+        <a href="#research" onclick="setActive(event, 'research')">Research</a>
+        <a href="#seminars" onclick="setActive(event, 'seminars')">Seminars</a>
+        <a href="#recipes" onclick="setActive(event, 'recipes')">Recipes</a>
+    </nav>
+    <canvas id="vectorFieldCanvas" width="800" height="300"></canvas>
+	
+    <div class="content active" id="home">
+        <div class="section">
+            <h2>About Me</h2>
+			Hi! I am a mathematician specialised on differential geometry. Currently, I am a PhD student at the <a class="clicklink" href="https://www.uni-hannover.de/de/">LUH</a>. Beforehand, I studied mathematics and some theoretical physics at the LUH as well. My current contact information can be found <a class="clicklink" href="https://www.differentialgeometrie.uni-hannover.de/en/institut/personenverzeichnis/personen-detailansicht?tx_t3luhepv_t3luhepvoe%5Baction%5D=detailsToPerson&tx_t3luhepv_t3luhepvoe%5Bcontroller%5D=Organisation&tx_t3luhepv_t3luhepvoe%5BdisablePersHomepages%5D=0&tx_t3luhepv_t3luhepvoe%5Borganisation%5D=31&tx_t3luhepv_t3luhepvoe%5Bperson%5D=1963&tx_t3luhepv_t3luhepvoe%5Brole%5D=207&cHash=6fe4b353f11422197c8ca95f85b89b5b">here</a>.
+            <h2>News and updates</h2>
+            <ul>
+			<li>Between 19.May and 24. May 2025 I will be at the workshop "Geometric moduli spaces - rigidity, genericity, stability" at the ICMS in Edinburgh</li>
+			<li>Between 30.Mar and 4. Apr 2025 I will participate in the "SPP conference" at the MPI in Leipzig</li>
+			<li>Between 23.Feb and 28. Feb 2025 I will join the blockseminar on "Seiberg-Witten theory" in Ratzeburg</li>
+			<li>On 23.Jan 2025 I will give a talk in the workshop "Geometry and Analysis
+in Hannover and Magdeburg"</li>
+			</ul>
+        </div>
+    </div>
+    
+	
+    <div class="content" id="research">
+        <div class="section">
+            <h2>Research Topics</h2>
+            <p>My research interests lie at the crossroads of geometric analysis, convex geometry, complex geometry and mathematical physics. Currently, I am thinking about the following topics: Non-existence results for harmonic maps, stochastic completeness, pullvexity, geometric maximum principles and the moduli space of twisted monopoles </p>
+            <h2>Publications</h2>
+            <ul class="toggle-list" id="publications">
+				<li onclick="toggleContent(this)">Remarks on the generalised Calabi-Yau problem in higher codimension, <a class="clicklink" href="https://arxiv.org/abs/2404.08781">Arxiv</a><span class="toggle-content"> By introducing a more flexible notion of convexity, we obtain a new Omori-Yau maximum principle for harmonic maps. In the spirit of the Calabi-Yau conjectures, this principle is more suitable for studying the unboundedness of certain totally geodesic projections of minimal submanifolds of higher codimension. We further explore this maximum principle by applying it to conformal maps, harmonic maps into Cartan-Hadamard manifolds, as well as cone, wedge and halfspace theorems.</span></li>
+                <li onclick="toggleContent(this)">Perturbed cone theorems for proper harmonic maps, <a class="clicklink" href="https://arxiv.org/abs/2312.12375">Arxiv</a> <span class="toggle-content">     Inspired by the halfspace theorem for minimal surfaces in R^3 of Hoffman-Meeks, the halfspace theorem of Rodriguez-Rosenberg, and the cone theorem of Omori, we derive new non-existence results for proper harmonic maps into perturbed cones in Rn, horospheres in Hn and also into perturbed Riemannian cones. The technical tool in use is an extension of the foliated maximum principle appearing in Assimos-Jost to the non-compact setting.</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="content" id="seminars">
+        <div class="section">
+            <h2>Youtube seminar</h2>
+			This seminar is based on the fact that on Youtube (and on other streaming services as well) there are excelent talks by outstanding mathematicans and physicists. The setup of the seminar is the following: Watch these videos together and discuss about its content. As a sidenote, the original idea for this seminar arose in a discussion with Erfan Rezaei.
+			<h3>Summer term 2024</h3>
+            <ul class="toggle-list" id="seminars-list">
+				<li onclick="toggleContent(this)">HyperKähler metrics and symmetries - Andrew Swann (31 May 2024)  <a class="clicklink" href="https://www.youtube.com/watch?v=spFntR7FfVg">Youtube</a><span class="toggle-content">An interesting introduction to HyperKähler geometry with many examples.</span></li>
+				<li onclick="toggleContent(this)"> Integrable systems and representation theory: between geometry, algebra and analysis - Nicolai Reshetikhin (7 May 2024)  <a class="clicklink" href="https://bimsa.net/bimsavideo.html?id=22970.mp4">Not Youtube</a><span class="toggle-content">After a short introduction to Hamiltonian systems, some recent(ish) work of R. is presented </span></li>
+				<li onclick="toggleContent(this)"> QM and QFT from algebraic and geometric viewpoints 1/4 - Albert Schwarz (5 May 2024)<a class="clicklink" href="https://www.youtube.com/watch?v=ILPhdbfV5ro ">Youtube</a><span class="toggle-content">A (new?) geometric framework for quamtum mechanics is introduced. The space of states is promoted as the main object of study  </span></li>
+				<li onclick="toggleContent(this)"> Symplectic geometry of Teichmueller spaces for surfaces with boundary 1/3 - Eckhard Meinrenken <a class="clicklink" href="https://www.youtube.com/watch?v=_UU-XyufyfI ">Youtube</a><span class="toggle-content">After some motivation the main topic is a coordinate free definition of the Virasoro algebra  </span></li>
+				<li onclick="toggleContent(this)">The 3d A-model: generalized Seiberg-Witten equations, vortices and monopoles 1 - Justin Hilburn <a class="clicklink" href="https://www.youtube.com/watch?v=M_fPsh72ACs ">Youtube</a><span class="toggle-content"> Covers a lot of material about mirror symmetry from the physical point of view. </span></li>
+				<li onclick="toggleContent(this)"> Generalized Seiberg-Witten equations 3 - Thomas Walpuski (19 Apr. 2024) <a class="clicklink" href="http://video.ictp.it/WEB/2022/2022_08_01-smr3648/2022_08_05-09_00-smr3648.mp4">Not Youtube</a><span class="toggle-content"> Rescaling of the generalised SW leads to Z_2 harmonic spinors. These objects often prevent compactness results.  </span></li>
+				<li onclick="toggleContent(this)"> Generalized Seiberg-Witten equations 2 - Thomas Walpuski (11 Apr. 2024) <a class="clicklink" href="https://www.youtube.com/watch?v=7CjylU3H7pA ">Youtube</a><span class="toggle-content">This lectures is devoted to the definition of the generalised SW equation. </span></li>
+				<li onclick="toggleContent(this)"> Generalized Seiberg-Witten equations 1 - Thomas Walpuski (9 Apr. 2024) <a class="clicklink" href="https://www.youtube.com/watch?v=RDUl-O_QUOk ">Youtube</a><span class="toggle-content"> The lecture was about the mathematical setup for gauge theory. The equations of Yang-Mills (ASD), Seiberg-Witten and Vafa-Witten were introduced as well. <a class="clicklink" href="https://web.archive.org/web/20220814032250/https://walpu.ski/ICTP.pdf">Lecture Notes</a> </span></li>
+            </ul>
+			<p></p>
+        </div>
+    </div>
+	
+	
+    
+    <div class="content" id="recipes">
+        <h1>Recipes</h1>
+        <div class="section">
+            <h2>Pizza dough (like in Napoli)</h2>
+			<ul> 
+			<li>100% Wheat flour of type 00</li>
+			<li>65% Cold water</li>
+			<li>3% Salt</li>
+			<li>0.4% Fresh yeast</li>
+			<li>Some semolina</li>
+			</ul>
+            <p>Mix the salt and the cold water in a bowl. Take ~20% of the flour and mix it in. Only now should the yeast be mixed in the water-salt-flour mix since otherwise the salt kills of the yeast and you created a non-rising dought. Mix everything until it is smooth and you mix in more and more of the flour.</p>
+			<p>This is an optional step but putting the dough into the fridge for up to 3 days is an essential step for achieving the well-known Napolitan texture.</p>
+			<p>Let the dough rise for two hours at room temperature. Thereafter, seperate off 250g - 300g dough balls and let them rise for 5-7 hours in an airtight enviroment</p>
+			<p>Put on a flat surface semolina and put the dough ball on top. Create a boundary by pressing down the middle part of the dough ball with your fingertips. Lastly, use your palms for extending the dough to a usual pizza shape.</p>
+        </div>
+    </div>
+    <p> </p>
+    <script>
+        let vectorFields = [
+            (x, y) => ({ vx: y * 0.02, vy: -x * 0.02 }),
+			(x, y) => ({ vx: (y+x) * 0.02, vy: -x * 0.02 }),
+			(x, y) => ({ vx: (y-x) * 0.02, vy: -x * 0.02 }),
+			(x, y) => ({ vx: y * 0.02, vy: -x * 0.02 }),
+            (x, y) => ({ vx: -y * 0.02, vy: x * 0.02 }),
+            (x, y) => ({ vx: x * 0.01, vy: y * 0.01 }),
+            (x, y) => ({ vx: -x * 0.01, vy: -y * 0.01 }),
+            (x, y) => ({ vx: (Math.random() - 0.5) * 5, vy: (Math.random() - 0.5) * 5 }),
+			(x, y) => ({ vx: (Math.random() - 0.5) * 10, vy: (Math.random() - 0.5) * 10 })
+        ];
+        
+        let currentVectorField = vectorFields[Math.floor(Math.random() * vectorFields.length)];
+        
+        function setActive(event, sectionId) {
+            event.preventDefault();
+            document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.querySelectorAll('.content').forEach(div => div.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            
+            currentVectorField = vectorFields[Math.floor(Math.random() * vectorFields.length)];
+        }
+        
+		function toggleContent(element) {
+            let content = element.querySelector(".toggle-content");
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+		
+        const canvas = document.getElementById("vectorFieldCanvas");
+        const ctx = canvas.getContext("2d");
+        const particles = [];
+        
+        function spawnParticle() {
+            let angle = Math.random() * Math.PI * 2;
+            let radius = Math.random() * 100;
+            let lifespan = Math.random() * 480 + 120;
+            particles.push({ x: Math.cos(angle) * radius, y: Math.sin(angle) * radius, lifespan, age: 0, history: [] });
+        }
+        
+        function animate() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            for (let i = particles.length - 1; i >= 0; i--) {
+                let p = particles[i];
+                let { vx, vy } = currentVectorField(p.x, p.y);
+                p.x += vx;
+                p.y += vy;
+                p.history.push({ x: p.x, y: p.y });
+                if (p.history.length > 30) p.history.shift();
+                ctx.beginPath();
+                ctx.moveTo(p.history[0].x + 400, p.history[0].y + 200);
+                p.history.forEach((point, index) => {
+                    ctx.lineTo(point.x + 400, point.y + 200);
+                    ctx.strokeStyle = `rgba(200, 200, 200, ${index / p.history.length})`;
+                });
+                ctx.stroke();
+                p.age++;
+                if (p.age > p.lifespan) particles.splice(i, 1);
+            }
+            if (particles.length < 150) spawnParticle();
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
 </body>
 </html>
-
-
