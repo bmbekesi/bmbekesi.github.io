@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balázs Márk Békési</title>
+    <title>Dr Balázs Márk Békési</title>
     <style>
         body {
             background-color: black;
@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
 			overflow: hidden;
+			font-size: 1.2em;
         }
         .navbar {
             display: flex;
@@ -53,7 +54,7 @@
 		.section {
             margin: 20px;
             text-align: left;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -90,41 +91,73 @@
     <nav class="navbar">
         <a href="#home" class="active" onclick="setActive(event, 'home')">Balázs Márk Békési</a>
         <a href="#research" onclick="setActive(event, 'research')">Research</a>
+		<a href="#events" onclick="setActive(event, 'events')">Events</a>
         <a href="#seminars" onclick="setActive(event, 'seminars')">Seminars</a>
         <a href="#recipes" onclick="setActive(event, 'recipes')">Recipes</a>
     </nav>
-    <canvas id="vectorFieldCanvas" width="800" height="300"></canvas>
+    <canvas id="vectorFieldCanvas" width="800" height="400"></canvas>
 	
     <div class="content active" id="home">
         <div class="section">
             <h2>About Me</h2>
-			Hi! I am a mathematician specialised on differential geometry. Currently, I am a PhD student at the <a class="clicklink" href="https://www.uni-hannover.de/de/">LUH</a>. 
-			Beforehand, I studied mathematics and some theoretical physics at the LUH as well. My current contact information can be found <a class="clicklink" href="https://www.differentialgeometrie.uni-hannover.de/en/institut/personenverzeichnis/personen-detailansicht?tx_t3luhepv_t3luhepvoe%5Baction%5D=detailsToPerson&tx_t3luhepv_t3luhepvoe%5Bcontroller%5D=Organisation&tx_t3luhepv_t3luhepvoe%5BdisablePersHomepages%5D=0&tx_t3luhepv_t3luhepvoe%5Borganisation%5D=31&tx_t3luhepv_t3luhepvoe%5Bperson%5D=1963&tx_t3luhepv_t3luhepvoe%5Brole%5D=207&cHash=6fe4b353f11422197c8ca95f85b89b5b">here</a>.
-            <h2>News and updates</h2>
+			Hi! I am Balázs Márk Békési, a mathematician specialised on (complex) differential geometry, geometric analysis and gauge theory. Currently, I am an ERC-Postdoc at <a class="clicklink" href="https://www.unibocconi.it/en/faculty/balazs-mark-bekesi"> Universitá Bocconi</a> in the group of <a class="clicklink" href="https://www.unibocconi.it/en/faculty/alessandro-pigati">Alessandro Pigati</a> affiliated to the ERC project MAGNETIC.
+			
+			
+			Beforehand, I obtained my PhD under the supervision of <a class="clicklink" href="https://www.differentialgeometrie.uni-hannover.de/en/institut/personenverzeichnis/bielawski">Roger Bielawskiy</a> at the <a class="clicklink" href="https://www.differentialgeometrie.uni-hannover.de/en/">Institute for Differential Geometry</a>
+			of the <a class="clicklink" href="https://www.uni-hannover.de/de/">Leibniz university Hannover</a>.	I also studied mathematics and some theoretical physics at the same institute,	My current contact information can be found <a class="clicklink" href="https://www.unibocconi.it/en/faculty/balazs-mark-bekesi">here</a>.
+            <h2>News, updates and reminders to myself</h2>
             <ul>
-		    	<li>Between 28.Sep and 3. Oct 2025 I will join the blockseminar "Scalar curvature rigidity" in Sulzbürg</li>
-		    	<li>Between 1.Jul and 5. Jul 2025 I will be at the workshop "Higgs bundles and harmonic maps" at the CAU in Kiel</li>
-			<li>Between 19.May and 24. May 2025 I will be at the workshop "Geometric moduli spaces - rigidity, genericity, stability" at the ICMS in Edinburgh</li>
-		    	<li>Between 28.Apr and 2. May 2025 I will be at the masterclass "Geometry of Phase Transitions" at GeoTop in Copenhagen</li>
-			<li>Between 30.Mar and 4. Apr 2025 I will participate in the "SPP conference" at the MPI in Leipzig</li>
-			<li>Between 23.Feb and 28. Feb 2025 I will join the blockseminar on "Seiberg-Witten theory" in Ratzeburg</li>
-			<li>On 23.Jan 2025 I will give a talk in the workshop "Geometry and Analysis n Hannover and Magdeburg"</li>
+			<li> In April I will give a minicourse on gauge theory at Bocconi. </li>
+			<li> Maybe apply to <a class="clicklink" href="https://www.claymath.org/events/trends-in-differential-and-complex-geometry-a-celebration-of-nigel-hitchins-80th-birthday-2/">Trends in Differential and Complex Geometry: a celebration of Nigel Hitchin’s 80th birthday</a> </li>
+			<li> Maybe apply to <a class="clicklink" href="https://www.math.ku.dk/english/calendar/events/spectralgeometry26/">Spectral Geometry and its Relations to Minimal Surfaces</a> </li>
+			<li> Maybe apply to <a class="clicklink" href="https://www.math-stockholm.se/konferenser/master-class-2026-differential-geometry-and-general-relativity-1.1438873">Differential Geometry and General Relativity</a> </li>
+			<li> Maybe apply to <a class="clicklink" href="https://www.math.ku.dk/english/calendar/events/codimensions26/">All Codimensions Mean Curvature Flow and Minimal Surfaces</a> </li>
 			</ul>
         </div>
     </div>
     
+	<div class="content" id="events">
+        <div class="section">
+		
+            <h2>Upcoming events</h2>
+            <ul>
+			<li>On 24.Mar 2026 I will give a talk "Barriers, harmonic maps and perturbations" in the seminar of the geometry group of MPI Leibzig </li>
+			<li>Between 16.Mar and 20. Mar 2026 I will participate in the birthday conference" Riemann 200: Mathematics and Physics" at the Leibniz University Hannover </li>
+			</ul>
+            <h2>Past events in 2026</h2>
+			<ul>
+			<li>On 15.Jan 2026 I gave a talk about "twisted Bogomolny monopoles" in the Geometrie Oberseminar of CAU in Kiel</li>
+			</ul>
+			<h2>Past events in 2025</h2>
+            <ul>
+			<li>Between 5.Nov and 7. Nov 2025 I participated in the workshop "Local and nonlocal methods in geometric analysis" at the SNS in Pisa</li>
+		    <li>Between 28.Sep and 3. Oct 2025 I was at the blockseminar "Scalar curvature rigidity" in Sulzbürg and gave a talk about the Stern formula. Klaus also played the Darth Vader intro before my talk!</li>
+		    <li>Between 1.Jul and 5. Jul 2025 I was at the workshop "Higgs bundles and harmonic maps" at the CAU in Kiel</li>
+			<li>Between 19.May and 24. May 2025 I was at the workshop "Geometric moduli spaces - rigidity, genericity, stability" at the ICMS in Edinburgh</li>
+		    <li>Between 28.Apr and 2. May 2025 I participated in the masterclass "Geometry of Phase Transitions" at GeoTop in Copenhagen</li>
+			<li>Between 30.Mar and 4. Apr 2025 I participated in the "SPP conference" at the MPI in Leipzig</li>
+			<li>Between 23.Feb and 28. Feb 2025 I was at the blockseminar on "Seiberg-Witten theory" in Ratzeburg</li>
+			<li>On 23.Jan 2025 I gave a talk about "pullvexity" in the workshop "Geometry and Analysis n Hannover and Magdeburg"</li>
+			</ul>
+        </div>
+    </div>
+	
 	
     <div class="content" id="research">
         <div class="section">
             <h2>Research Topics</h2>
-            <p>My research interests lie at the crossroads of geometric analysis, convex geometry, complex geometry and mathematical physics. Currently, I am thinking about the following topics: Non-existence results for harmonic maps, stochastic completeness, pullvexity, geometric maximum principles and the moduli space of twisted monopoles </p>
-            <h2>Preprints</h2>
+            <p>My research interests lie at the crossroads of geometric analysis, convex geometry, complex geometry and mathematical physics. A new entry to these is geometric measure theory and its use in gauge theory. </p>
+			
+				
+            <h2>Preprints and Articles</h2>
             <ul class="toggle-list" id="publications">
-		<li onclick="toggleContent(this)">The moduli space of twisted Bogomolny monopoles, (in preparation) </span></li>
-		<li onclick="toggleContent(this)">A theorem of Omori in the context of Riemannian manifolds, (in preparation) </span></li>
-		<li onclick="toggleContent(this)">Remarks on the generalised Calabi-Yau problem in higher codimension, <a class="clicklink" href="https://arxiv.org/abs/2404.08781">Arxiv</a><span class="toggle-content"> By introducing a more flexible notion of convexity, we obtain a new Omori-Yau maximum principle for harmonic maps. In the spirit of the Calabi-Yau conjectures, this principle is more suitable for studying the unboundedness of certain totally geodesic projections of minimal submanifolds of higher codimension. We further explore this maximum principle by applying it to conformal maps, harmonic maps into Cartan-Hadamard manifolds, as well as cone, wedge and halfspace theorems.</span></li>
-                <li onclick="toggleContent(this)">Perturbed cone theorems for proper harmonic maps, <a class="clicklink" href="https://arxiv.org/abs/2312.12375">Arxiv</a> <span class="toggle-content">     Inspired by the halfspace theorem for minimal surfaces in R^3 of Hoffman-Meeks, the halfspace theorem of Rodriguez-Rosenberg, and the cone theorem of Omori, we derive new non-existence results for proper harmonic maps into perturbed cones in Rn, horospheres in Hn and also into perturbed Riemannian cones. The technical tool in use is an extension of the foliated maximum principle appearing in Assimos-Jost to the non-compact setting.</span></li>
+				<li onclick="toggleContent(this)">The moduli space of twisted Bogomolny monopoles, (in preparation) </span></li>
+				<li onclick="toggleContent(this)">A theorem of Omori in the context of Riemannian manifolds, (in preparation) </span></li>
+				<li onclick="toggleContent(this)">Remarks on the generalised Calabi-Yau problem in higher codimension, <a class="clicklink" href="https://arxiv.org/abs/2404.08781">Arxiv</a><span class="toggle-content"> By introducing a more flexible notion of convexity, we obtain a new Omori-Yau maximum principle for harmonic maps. In the spirit of the Calabi-Yau conjectures, this principle is more suitable for studying the unboundedness of certain totally geodesic projections of minimal submanifolds of higher codimension. We further explore this maximum principle by applying it to conformal maps, harmonic maps into Cartan-Hadamard manifolds, as well as cone, wedge and halfspace theorems.</span></li>
+				<li onclick="toggleContent(this)">Perturbed cone theorems for proper harmonic maps, <a class="clicklink" href="https://arxiv.org/abs/2312.12375">Arxiv</a>, <a class="clicklink" href="https://www.cambridge.org/core/journals/canadian-mathematical-bulletin/article/perturbed-cone-theorems-for-proper-harmonic-maps/F335D06581E3DC23C5772FA0AE76E100">Published version</a>  <span class="toggle-content">     Inspired by the halfspace theorem for minimal surfaces in R^3 of Hoffman-Meeks, the halfspace theorem of Rodriguez-Rosenberg, and the cone theorem of Omori, we derive new non-existence results for proper harmonic maps into perturbed cones in Rn, horospheres in Hn and also into perturbed Riemannian cones. The technical tool in use is an extension of the foliated maximum principle appearing in Assimos-Jost to the non-compact setting.</span></li>  
             </ul>
+			<h2>Thesis</h2>
+			<p>If youe are somehow interested in my PhD thesis then you can find it <a class="clicklink" href="https://d-nb.info/138522679X/34">here</a>. </p>
         </div>
     </div>
     
@@ -168,16 +201,14 @@
     </div>
     <p> </p>
     <script>
+		time = 0;
         let vectorFields = [
-            (x, y) => ({ vx: y * 0.02, vy: -x * 0.02 }),
-			(x, y) => ({ vx: (y+x) * 0.02, vy: -x * 0.02 }),
-			(x, y) => ({ vx: (y-x) * 0.02, vy: -x * 0.02 }),
-			(x, y) => ({ vx: y * 0.02, vy: -x * 0.02 }),
-            (x, y) => ({ vx: -y * 0.02, vy: x * 0.02 }),
-            (x, y) => ({ vx: x * 0.01, vy: y * 0.01 }),
-            (x, y) => ({ vx: -x * 0.01, vy: -y * 0.01 }),
-            (x, y) => ({ vx: (Math.random() - 0.5) * 5, vy: (Math.random() - 0.5) * 5 }),
-			(x, y) => ({ vx: (Math.random() - 0.5) * 10, vy: (Math.random() - 0.5) * 10 })
+			(x, y) => ({ vx: y * 0.02*Math.cos(time/60) , vy: x * 0.02}),
+			//(x, y) => ({ vx: (x*x*0.0008 -y*y*0.0008)*Math.cos(time/30) , vy:  Math.sin(x)*2}),
+            (x, y) => ({ vx: Math.cos(time/30)*y * 0.02 + Math.sin(time/30)*x * 0.02 , vy: -Math.cos(time/30)*x * 0.02+ Math.sin(time/30)*y * 0.02}),
+			(x, y) => ({ vx: Math.cos(time/300)*x * 0.02 + Math.sin(time/300)*y * 0.02 , vy: Math.cos(time/300)*x * 0.02 + Math.sin(time/300)*y * 0.02}),
+			(x, y) => ({ vx: (y+x*Math.cos(time/90)) * 0.02, vy: -x * 0.02 }),
+			//(x, y) => ({ vx: 15*(Math.random() - 0.5)*Math.cos(time/90), vy: 15*(Math.random() - 0.5)*Math.sin(time/90) }),
         ];
         
         let currentVectorField = vectorFields[Math.floor(Math.random() * vectorFields.length)];
@@ -200,16 +231,18 @@
 		
         const canvas = document.getElementById("vectorFieldCanvas");
         const ctx = canvas.getContext("2d");
-        const particles = [];
+        const particles = []; // particle data: pos_x, pos_y, vel_x, vel_y, lifespan, age, history
         
+		
         function spawnParticle() {
             let angle = Math.random() * Math.PI * 2;
-            let radius = Math.random() * 100;
-            let lifespan = Math.random() * 480 + 120;
-            particles.push({ x: Math.cos(angle) * radius, y: Math.sin(angle) * radius, lifespan, age: 0, history: [] });
+            let radius = Math.random() * 150;
+            let lifespan = Math.random() * 480 + 500;
+            particles.push({ x: Math.cos(angle) * radius, y: Math.sin(angle) * radius , lifespan, age: 0, history: [] });
         }
         
         function animate() {
+			time = time+1;
             ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             for (let i = particles.length - 1; i >= 0; i--) {
@@ -218,21 +251,24 @@
                 p.x += vx;
                 p.y += vy;
                 p.history.push({ x: p.x, y: p.y });
-                if (p.history.length > 30) p.history.shift();
+                if (p.history.length > 15) p.history.shift();
                 ctx.beginPath();
-                ctx.moveTo(p.history[0].x + 400, p.history[0].y + 200);
+                ctx.moveTo(p.history[0].x + 400, p.history[0].y + 250);
                 p.history.forEach((point, index) => {
-                    ctx.lineTo(point.x + 400, point.y + 200);
+                    ctx.lineTo(point.x + 400, point.y + 250);
                     ctx.strokeStyle = `rgba(200, 200, 200, ${index / p.history.length})`;
                 });
                 ctx.stroke();
                 p.age++;
                 if (p.age > p.lifespan) particles.splice(i, 1);
+				if (p.x*p.x + p.y*p.y > 42000) particles.splice(i, 1);
             }
             if (particles.length < 150) spawnParticle();
             requestAnimationFrame(animate);
+			
         }
         animate();
+		
     </script>
 </body>
 </html>
